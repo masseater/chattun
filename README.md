@@ -21,7 +21,7 @@
 
 ### OAuth フローを動かせるようにする設定
 
-Slack App の Redirect URL が https しか受け付けないためにローカルマシン上で https のリクエストを受けられるようにする必要がある  
+Slack App の Redirect URL が https しか受け付けないためにローカルマシン上で https のリクエストを受けられるようにする必要がある
 そのため、[create-react-app の HTTPS 利用の機能](https://create-react-app.dev/docs/using-https-in-development/)を使う
 
 これによって、前段に https のプロキシサーバーを立て、フロントエンドとサーバーへのリクエストを全てプロキシで受けて処理するような形にする
@@ -76,7 +76,7 @@ $ ./build_image
 - `Event Subscriptions`
   - > `Enable Events` を ON にする
   - `Subscribe to events on behalf of users` で以下の項目を追加する
-    - `message.channels` , `reaction:added` , `reaction:removed`
+    - `message.channels` , `reaction_added` , `reaction_removed`
 - `Socket Mode` > `Enable Socket Mode` を ON にする
 - `OAuth & Permissions` > `Redirect URLs` にサーバーの URL を以下のように設定する
   - `https://[サーバーのドメイン]/api/slack/oauth_redirect`
